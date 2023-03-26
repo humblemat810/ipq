@@ -1,14 +1,35 @@
-from distutils.core import setup
-setup(
-  name = 'indexed_pq',         # How you named your package folder (MyLib)
-  packages = ['indexed_pq'],   # Chose the same as "name"
-  version = '0.1.2',      # Start with a small number and increase it with every change you make
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'TYPE YOUR DESCRIPTION HERE',   # Give a short description about your library
-  author = 'humblemat',                   
-  url = 'https://github.com/humblemat810',   # Provide either the link to your github or to your website
-  keywords = ['indexed priority queue', 
-              'min heap', 
-              'max heap', 
-              'median heap'],   # Keywords that define your package best
+import setuptools
+ 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+ 
+setuptools.setup(
+    # Here is the module name.
+    name="indexed_pq",
+    # version of the module
+    version="0.1.4",
+ 
+    # Name of Author
+    author="humblemat",
+ 
+    # your Email address
+    author_email="humblemat@gmail.com",
+ 
+    # Specifying that we are using markdown file for description
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+ 
+    # Any link to reach this module, ***if*** you have any webpage or github profile
+    # url="https://github.com/username/",
+    packages=setuptools.find_packages(),
+ 
+ 
+    license="MIT",
+ 
+    # classifiers like program is suitable for python3, just leave as it is.
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
 )
